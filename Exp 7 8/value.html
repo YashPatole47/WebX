@@ -1,0 +1,17 @@
+<html  ng-app="myApp" ng-controller="MyController">
+<head>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <script>
+        var myApp = angular.module('myApp', []);
+
+myApp.value('message', 'Hello, World!');
+
+myApp.controller('MyController', ['$scope', 'message', function($scope, message) {
+  $scope.greeting = message;
+}]);
+    </script>
+        <p>{{greeting}}</p>
+</body>
+</html>

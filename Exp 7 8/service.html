@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="myController">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var mycore = angular.module('myApp', []);
+    mycore.factory("myPro", function() {
+      var data = {};
+      data.add = function() {
+        return 10 + 2;
+      };
+      return data;
+    });
+    mycore.controller("myController", function($scope, myPro) {
+      $scope.result = myPro.add();
+      console.log($scope.result);
+    });
+  </script>
+</body>
+
+</html>
