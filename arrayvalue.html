@@ -1,0 +1,27 @@
+<script> 
+
+   
+        const numbers = [20,23,4,67,88];
+        let userinput = [];
+        for (i=0; i<2;i++){
+        
+        let userno = parseInt(prompt("Enter a value to search"));
+        userinput.push(userno);    
+        let results = "";
+    
+        for(let j=0; j<numbers.length; j++){  
+        if(numbers[j] === userinput[i]){
+            results="Element " +userinput[i]+ " is present at index " +j+ " "; 
+        }
+        
+        }
+        if(results){
+            console.log(results);
+        }else{
+            console.log("Element " +userinput[i]+ " is not found");
+        }
+        
+    }
+    
+
+    </script> 
